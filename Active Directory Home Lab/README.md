@@ -41,9 +41,6 @@ static IP could not conflict with DHCP.
 ### 2. Domain Controller (DC01)
 Installed Windows Server 2022 with Desktop Experience, renamed it DC01,
 and confirmed activation.
-
-![Edition](../screenshots/p1-03-dc01-edition-select.png)
-![Renamed](../screenshots/p1-04-dc01-renamed.png)
 ![Activation](../screenshots/p1-07-dc01-activation.png)
 
 Assigned a static IP and pointed DNS to itself.
@@ -68,7 +65,6 @@ controller in a new forest, helpdesk.lab.
 Verified my admin login and DNS resolution for both the domain and the internet.
 
 ![whoami](../screenshots/p1-17b-admin-login-whoami.png)
-![DNS test](../screenshots/p1-17c-dc01-dns-test.png)
 
 ### 4. Client Workstation (CLIENT01)
 
@@ -110,8 +106,9 @@ Took snapshots of both VMs as clean restore points for future projects.
   then gave DC01 the static IP 10.0.2.10.
 
 **2. DC01 froze while I was running commands**
-- Fix: [FILL IN: how DC01 recovered]. Afterward, I confirmed my OUs, users,
-  and groups were intact and took a snapshot right away.
+- Fix: Used VirtualBox's Machine > Reset (a hard restart) after the VM stopped
+  responding. Afterward, I confirmed my OUs, users, and groups were intact and
+  took a snapshot right away.
 
 **3. CLIENT01 showed only a black screen at startup**
 - Diagnosis: Compared CLIENT01's settings with DC01, which worked, using
